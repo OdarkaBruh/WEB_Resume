@@ -1,0 +1,107 @@
+body {
+    background-color: #F6F6FA;
+    font-family: 'Montserrat';
+    height: 100%
+}
+
+aside {
+    width: 370px;
+    background-color: #E0EBFE;
+    height: 100%;
+}
+
+.SidebarText {
+    margin-left: 5%;
+}
+
+.mainBody{
+    width:830px;
+    height: 1150px;
+    margin-left: 20px;
+}
+
+.mainBody section{
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 35px;
+}
+
+.mainBody .topInfo{
+    background-color: #E0EBFE;
+    border-radius: 20px;
+    width: 770px;
+    height: 250px;
+}
+
+.mainBody .topInfo .text{
+    position: absolute;
+    margin: 20px;
+    margin-top: 30px;
+    width: 720px;
+}
+
+.text h1{
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.text h2{
+    font-size: 16px;
+    font-weight: bold;
+}
+.text p{
+    font-size: 16px;
+    font-weight: bold;
+    color: #595959;
+}
+
+.projects {
+    
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-color: #F3F8FF;
+    border-radius: 20px;
+    padding: 20px;
+    padding-top: 5px;
+}
+
+.projects h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.projects li {
+    font-size: 14px;
+}
+
+.experience {
+    margin-top: 32px;
+    background-color: #F3F8FF;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.blueAc {
+    color: #6D9BF5;
+}
+
+.experience p {
+    color: #A8A8A8;
+}
+#backgroundBorder {
+    display: inline-flex;
+    background-color: white;
+    margin: 40px;
+    margin-left:20%;
+}
+
+#myPhoto {
+    margin-left: 30px;
+    margin-top: 35px;
+    box-shadow: 0px 10px 10px #C4D5F1;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 310px;
+}
