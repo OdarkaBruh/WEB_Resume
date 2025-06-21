@@ -1,27 +1,29 @@
-body, html {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    margin: 0px;
+html {
+    width: 95vh;
+    height: 95vh;
+    margin: auto;
     padding: 0px;
     background-color: light-dark(#F6F6FA, black);
     font-family: 'Montserrat';
-    display: inline-flex;
-    overflow: hidden;
-    flex-direction: row;
+    box-sizing: border-box;
 }
+
 * {
     box-sizing: inherit;
 }
 
 body {
-    width: 95vh;
-    height: 95vh;
+    margin: auto;
+    padding: 20px;
+    padding-left: 10%;
+}
+#main {
+    width: 100%;
+    display: inline-flex;
+    overflow: hidden;
+    flex-direction: row;
 }
 
-.mainBody {
-    width: 10%
-}
 [data-theme="light"] {
 color-scheme: light;
 }
@@ -32,30 +34,23 @@ color-scheme: dark;
 }
 
 aside {
+    
     float: left;
-    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: light-dark(#E0EBFE,rgb(8, 15, 27));
     height: 100%;
 }
 #aside {
-}
-.SidebarText {
-    margin-left: 5%;
+    width: 50%;
 }
 
-.mainBody{
-    margin: 0px;
-    margin-left: 1%;
+section{
+    width: 100%;
 }
 
-.mainBody section{
-    
-    margin-left: 40px;
-    margin-right: 20px;
-    margin-top: 35px;
-    display: inline;
+.mainBody {
+    padding-left: 4%;
 }
 
 .mainBody .topInfo{
@@ -63,24 +58,19 @@ aside {
     border-radius: 20px;
 }
 
-.mainBody .topInfo .text{
-    margin: 20px;
-    margin-top: 30px;
-}
-
 .text h1{
     margin-top: 8px;
     margin-bottom: 12px;
-    font-size: 45px;
+    font-size: 2em;
     font-weight: bolder;
 }
 
 .text h2{
-    font-size: 16px;
+    font-size: 1em;
     font-weight: bold;
 }
 .text p{
-    font-size: 16px;
+    font-size: 0.8em;
     font-weight: bold;
     color: light-dark(#595959, rgb(84, 82, 99));
 }
@@ -118,11 +108,6 @@ section h5 {
     margin: 0px;
 }
 
-section p {
-    padding-top: 10px;
-    margin-left: 40px;
-}
-
 #myPhoto {
     margin-left: 30px;
     margin-top: 15px;
@@ -130,7 +115,7 @@ section p {
     border-radius: 15px;
     border: 2px solid light-dark(white,rgb(8, 15, 27));
     margin-bottom: 20px;
-    width: 20px;
+    width: 80%;
 }
 section > div {
     background-color: light-dark(#E0EBFE,rgb(8, 15, 27));;
@@ -154,7 +139,6 @@ section > div {
 }
 
 .Contacts ul {
-    list-style-type: square;
     padding-left: 25px;
 }
 .Contacts a{
@@ -163,7 +147,8 @@ section > div {
 }
 
 .Contacts svg {
-    width: 25px;
+    width: 10%;
+    margin-left: 10px;
     stroke: light-dark(rgb(34, 36, 105),#d8d8d8);
     vertical-align: middle;
 }
@@ -196,7 +181,7 @@ label {
   cursor: pointer;
   text-indent: -9999px;
   width: 50px;
-  height: 25px;
+  height: 29px;
   background: white;
   display: block;
   border-radius: 100px;
@@ -209,16 +194,11 @@ label:after {
   position: absolute;
   top: 3px;
   left: 3px;
-  right: 3px;
   width: 20px;
   height: 20px;
   background: #6D9BF5;
   border-radius: 40px;
   transition: 0.3s;
-}
-
-section {
-    width: 100%;
 }
 
 input:checked + label {
@@ -238,21 +218,30 @@ p, a {
     overflow: hidden;
 }
 
+.Contacts a {
+    font-size: 0.8em;
+}
+
 @media screen and (max-width: 600px) {
-    body{
-        width: 100%;
-        margin: auto;
-        padding: 0px;
-        display: block;
+    #main {
+        flex-direction: column;
     }
+
     #myPhoto {
         width:80%;
     }
+
     body div {
         margin: 0px;
     }
+
     a {
         font-size: small;
+    }
+
+    #aside {
+        width: 90%;
+        margin: 0px;
     }
     aside {
         width: 90%;
@@ -266,7 +255,8 @@ p, a {
         width: 80%
     }
     section div {
-        width: 100%;
+        width: 80%;
+        margin-top: 10px;
     }
     #backgroundBorder {
         margin: 0px;
@@ -276,5 +266,8 @@ p, a {
 
     h3 {
         color: red;
+    }
+    .mainBody {
+        padding: 0px;
     }
 }
