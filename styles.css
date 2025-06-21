@@ -79,7 +79,7 @@ section{
     font-size: 14px;
 }
 .projects p {
-    color: black;
+    color: light-dark(black,white);
     margin-bottom: 10px;
     font-weight: bold;
     padding: 0px;
