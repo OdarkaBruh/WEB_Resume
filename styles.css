@@ -1,43 +1,71 @@
-body {
-    background-color: #F6F6FA;
+body, html {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: light-dark(#F6F6FA, black);
     font-family: 'Montserrat';
-    height: 100%
+    display: inline-flex;
+    overflow: hidden;
+    flex-direction: row;
+}
+* {
+    box-sizing: inherit;
+}
+
+body {
+    width: 95vh;
+    height: 95vh;
+}
+
+.mainBody {
+    width: 10%
+}
+[data-theme="light"] {
+color-scheme: light;
+}
+
+/* Dark Mode - forcing this for the example, not advised to do this normally except you want to give your users the option to do so */
+[data-theme="dark"] {
+color-scheme: dark;
 }
 
 aside {
-    width: 370px;
-    background-color: #E0EBFE;
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: light-dark(#E0EBFE,rgb(8, 15, 27));
     height: 100%;
 }
-
+#aside {
+}
 .SidebarText {
     margin-left: 5%;
 }
 
 .mainBody{
-    width:830px;
-    height: 1150px;
-    margin-left: 20px;
+    margin: 0px;
+    margin-left: 1%;
 }
 
 .mainBody section{
+    
     margin-left: 40px;
     margin-right: 20px;
     margin-top: 35px;
+    display: inline;
 }
 
 .mainBody .topInfo{
-    background-color: #E0EBFE;
+    background-color: light-dark(#E0EBFE,rgb(8, 15, 27));
     border-radius: 20px;
-    width: 770px;
-    height: 250px;
 }
 
 .mainBody .topInfo .text{
-    position: absolute;
     margin: 20px;
     margin-top: 30px;
-    width: 720px;
 }
 
 .text h1{
@@ -54,54 +82,199 @@ aside {
 .text p{
     font-size: 16px;
     font-weight: bold;
-    color: #595959;
-}
-
-.projects {
-    
-    margin-top: 32px;
-    margin-bottom: 32px;
-    background-color: #F3F8FF;
-    border-radius: 20px;
-    padding: 20px;
-    padding-top: 5px;
-}
-
-.projects h3 {
-    font-size: 22px;
-    font-weight: bold;
+    color: light-dark(#595959, rgb(84, 82, 99));
 }
 
 .projects li {
     font-size: 14px;
 }
-
-.experience {
-    margin-top: 32px;
-    background-color: #F3F8FF;
-    border-radius: 20px;
-    padding: 20px;
+.projects p {
+    color: black;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
 }
 
 .blueAc {
     color: #6D9BF5;
 }
 
-.experience p {
+.experience p, .education p {
     color: #A8A8A8;
 }
-#backgroundBorder {
-    display: inline-flex;
-    background-color: white;
-    margin: 40px;
-    margin-left:20%;
+
+section h3 {
+    padding-bottom: 10px;
+}
+
+section h3, section h4{
+    margin: 0px;
+    padding-top: 10px;
+}
+
+section h5 {
+    padding: 0px;
+    margin: 0px;
+}
+
+section p {
+    padding-top: 10px;
+    margin-left: 40px;
 }
 
 #myPhoto {
     margin-left: 30px;
-    margin-top: 35px;
-    box-shadow: 0px 10px 10px #C4D5F1;
+    margin-top: 15px;
+    box-shadow: 0px 10px 10px light-dark(#E0EBFE,rgb(7, 7, 7));
     border-radius: 15px;
+    border: 2px solid light-dark(white,rgb(8, 15, 27));
     margin-bottom: 20px;
-    width: 310px;
+    width: 20px;
+}
+section > div {
+    background-color: light-dark(#E0EBFE,rgb(8, 15, 27));;
+    padding: 20px;
+    padding-top: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    padding-left: 25px;
+    margin-bottom: 30px;
+}
+
+
+.SidebarText h3, a, p{
+    margin: 0px;
+    color: light-dark(#3b3a86,#dddef0);
+}
+
+.SidebarText div {
+    margin: 10px;
+    padding: 10px;
+}
+
+.Contacts ul {
+    list-style-type: square;
+    padding-left: 25px;
+}
+.Contacts a{
+    margin: auto;
+    color: light-dark(rgb(59, 96, 131),#869bc9);
+}
+
+.Contacts svg {
+    width: 25px;
+    stroke: light-dark(rgb(34, 36, 105),#d8d8d8);
+    vertical-align: middle;
+}
+a:link {
+  text-decoration: none;
+}
+
+.SidebarText li {
+    list-style-type: square;
+    color: light-dark(rgb(59, 96, 131),#869bc9);
+}
+
+.NightMode {
+    margin-left: 55px;
+    margin-top: 25px;
+    display: inline-flex;
+}
+.NightMode svg{
+    height: 25px;
+    fill: light-dark(rgb(59, 96, 131),#869bc9);
+}
+
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: white;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  border: 2px solid light-dark(#cddbf7,#6781b6);
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  background: #6D9BF5;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+
+section {
+    width: 100%;
+}
+
+input:checked + label {
+  background: black;
+}
+
+input:checked + label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 20px;
+}
+p, a {
+    text-wrap: wrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        width: 100%;
+        margin: auto;
+        padding: 0px;
+        display: block;
+    }
+    #myPhoto {
+        width:80%;
+    }
+    body div {
+        margin: 0px;
+    }
+    a {
+        font-size: small;
+    }
+    aside {
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 25px;
+    }
+    .section {
+        width: 80%
+    }
+    section div {
+        width: 100%;
+    }
+    #backgroundBorder {
+        margin: 0px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    h3 {
+        color: red;
+    }
 }
